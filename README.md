@@ -5,6 +5,8 @@ auto locking and screen power off and more.
 
 Everything is themed to look as coherent as possible.
 
+![Alt text](screenshot.png?raw=true "Screenshot")
+
 ## Install
 Drop everything into ~/.config and reboot.
 
