@@ -3,6 +3,9 @@ Collection of dot files for my Hyprland setup, full setup including a customised
 wlogout with suspend & hibernate, wofi, an swww script to change wallpaper every 5 minutes, 
 auto locking and screen power off and more. 
 
+Also has a lock/DPMS inhitibor running with a nice indicator in waybay. Whenever anything
+is playing audio, lock/screen-off is disabled automatically.
+
 Everything is themed to look as coherent as possible.
 
 ![Alt text](screenshot.png?raw=true "Screenshot")
@@ -13,7 +16,7 @@ Drop everything into ~/.config and reboot.
 ## Prerequisites
 ### Required
 hyprland, swww, mako, terminator, swaylock, swayidle, wlogout, wofi, cliphist, slurp, swappy,
-wl-paste, polkit-gnome-authentication-agent.
+wl-paste, polkit-gnome-authentication-agent, sway-audio-idle-inhibit-git.
 ### Fonts
 liberation-mono, nerd-font-symbol.
 ### Optional
