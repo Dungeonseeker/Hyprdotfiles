@@ -1,0 +1,119 @@
+{
+    "layer": "top",
+    "position": "bottom",
+
+    "margin": "0 20 5 20",
+//    "width": 1280, // Waybar width
+
+    "exclusive": true,
+    "passthrough": false,
+//    "gtk-layer-shell": true,
+    "height": 40,
+    "modules-left": ["custom/wofi","custom/lock","custom/power"],
+    "modules-center": ["wlr/taskbar"],
+	"modules-right": ["custom/profile","backlight","battery","memory","disk","cpu","temperature","tray"],
+
+    "custom/wofi": {
+        "format": " ",
+        "on-click": "pkill wofi || wofi -n -c ~/.config/wofi/config-bmenu",
+        "tooltip": false
+    },
+
+    "custom/power": {
+        "format": " ",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
+    },
+
+
+    "custom/lock": {
+        "format": " ",
+        "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
+        "tooltip": false
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon} {name}",
+        "icon-size": 16,
+        "all-outputs": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "wofi"
+        ],
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Terminator": "Terminal"
+            }
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 0
+    },
+
+  "cpu": {
+        "interval": 10,
+        "format": " {usage}%",
+        "max-length": 10,
+        "on-click": "terminator -fb -T 'btop' -e 'btop'"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "Memory - {used:0.1f}GB used",
+        "on-click": "terminator -fb -T 'btop' -e 'btop'"
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "tooltip": true,
+        "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
+        "on-click": "terminator -fb -T 'btop' -e 'btop'"
+    },
+
+    "temperature": {
+        "thermal-zone": 1,
+        "format": " {temperatureC}°C",
+        "critical-threshold": 70,
+        "format-critical": " {temperatureC}°C",
+        "on-click": "terminator -fb -T 'btop' -e 'btop'"
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "custom/profile": {
+    //shows the current power profile and switches to next on click
+    "exec": "asusctl profile -p | sed s:'Active profile is'::",
+    "interval": 30,
+    "format": "󰈐 {}",
+    "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "~/.config/hypr/scripts/brightness --inc",
+        "on-scroll-down": "~/.config/hypr/scripts/brightness --dec",
+        "tooltip": true,
+        "tooltip-format": "{icon} Screen brightness {percent}%"
+    },
+
+}
