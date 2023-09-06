@@ -15,7 +15,7 @@ Drop everything into ~/.config and reboot.
 
 ## Prerequisites
 ### Required
-hyprland, swww, mako, terminator, swaylock, swayidle, wlogout, wofi, cliphist, slurp, swappy,
+hyprland, swww, mako, terminator, swaylock, swayidle, nwg-bar, wofi, cliphist, slurp, swappy,
 wl-paste, polkit-gnome-authentication-agent, sway-audio-idle-inhibit-git.
 ### Fonts
 liberation-mono, nerd-font-symbol.

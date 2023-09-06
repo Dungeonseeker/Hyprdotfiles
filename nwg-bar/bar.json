@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Lock",
+    "exec": "swaylock -f -c 000000",
+    "icon": "/home/carl/.config/nwg-bar/images/lock.svg"
+  },
+  {
+    "label": "Logout",
+    "exec": "hyprctl dispatch exit 0",
+    "icon": "/home/carl/.config/nwg-bar/images/logout.svg"
+  },
+  {
+    "label": "Reboot",
+    "exec": "systemctl reboot",
+    "icon": "/home/carl/.config/nwg-bar/images/restart.svg"
+  },
+  {
+    "label": "Shutdown",
+    "exec": "systemctl -i poweroff",
+    "icon": "/home/carl/.config/nwg-bar/images/shutdown.svg"
+  },
+  {
+    "label": "Sleep",
+    "exec": "systemctl -i suspend",
+    "icon": "/home/carl/.config/nwg-bar/images/suspend.svg"
+  },
+  {
+    "label": "Hibernate",
+    "exec": "systemctl -i hibernate",
+    "icon": "/home/carl/.config/nwg-bar/images/hibernate.svg"
+  }
+]

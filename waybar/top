@@ -5,9 +5,9 @@
     "margin": "5 20 0 20",
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "hyprland/language", "keyboard-state", "custom/pacman"],
+    "modules-left": ["hyprland/workspaces","hyprland/language","keyboard-state","custom/pacman"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "pulseaudio#microphone","custom/idle"],
+    "modules-right": ["pulseaudio","pulseaudio#microphone","custom/idle"],
 
 
     //***************************
@@ -53,11 +53,11 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%a, %d %b 20%y | %H:%M }"
+        "format": "{:%a, %d %b 20%y | %H:%M}"
     },
 
 	"custom/idle": {
-		"format": "{icon}",
+		"format": "| {icon}",
 		"exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
 		"exec-if": "which sway-audio-idle-inhibit",
 		"return-type": "json",

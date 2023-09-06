@@ -9,8 +9,8 @@
     "passthrough": false,
 //    "gtk-layer-shell": true,
     "height": 40,
-    "modules-left": ["custom/wofi","custom/lock","custom/power"],
-    "modules-center": ["wlr/taskbar"],
+    "modules-left": ["custom/wofi","custom/lock","custom/power","wlr/taskbar"],
+    "modules-center": [],
 	"modules-right": ["custom/profile","backlight","battery","memory","disk","cpu","temperature","tray"],
 
     "custom/wofi": {
@@ -79,7 +79,7 @@
     },
 
     "temperature": {
-        "thermal-zone": 1,
+        "thermal-zone": 6,
         "format": " {temperatureC}°C",
         "critical-threshold": 70,
         "format-critical": " {temperatureC}°C",
