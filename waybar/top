@@ -16,6 +16,11 @@
 
     "hyprland/workspaces": {
         "disable-scroll": true,
+		"format": "{name} {icon}",
+		"format-icons": {
+			"active": " ",
+			"default": " "
+		},
         "persistent_workspaces": {
             "1": [],
             "2": [],
@@ -25,7 +30,7 @@
     },
 
     "hyprland/language": {
-        "format": "{}  ",
+        "format": "{} |",
 	"min-length": 5,
 	"tooltip": false
     },
@@ -90,8 +95,8 @@
     },
 
     "pulseaudio#microphone": {
-        "format": "{format_source} {volume}%",
-        "format-source": "",
+        "format": "{format_source}",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "on-click": "~/.config/hypr/scripts/volume --toggle-mic",
         "on-click-right": "pavucontrol",
