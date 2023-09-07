@@ -31,5 +31,5 @@ for brightnessctl. While these things won't hurt a non asus device they also won
 if you clone this repo and don't have an ASUS ROG or TUF machine then expect to have to make changes.
 
 ## Shout-outs
-Based on SolDoesTechs HyprV setup - https://github.com/SolDoesTech/HyprV4
+Based on SolDoesTechs HyprV setup - https://github.com/SolDoesTech/HyprV4 \
 Waybar is based on Igaboury's styling - https://github.com/lgaboury/Sway-Waybar-Install-Script
