@@ -29,3 +29,7 @@ The profile module for waybay requires asusctl to find and change power profiles
 rog-control-center runs on launch and I have added some funky media key binds to make OSD work
 for brightnessctl. While these things won't hurt a non asus device they also won't work either,
 if you clone this repo and don't have an ASUS ROG or TUF machine then expect to have to make changes.
+
+## Shout-outs
+Based on SolDoesTechs HyprV setup - https://github.com/SolDoesTech/HyprV4
+Waybar is based on Igaboury's styling - https://github.com/lgaboury/Sway-Waybar-Install-Script
